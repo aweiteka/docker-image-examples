@@ -1,4 +1,4 @@
-FROM redhat/rhel7
+FROM registry.access.redhat.com/rhel7
 MAINTAINER scollier <scollier@redhat.com>
 
 RUN yum -y update; yum clean all
