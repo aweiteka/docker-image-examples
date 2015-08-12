@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/rhel7
 MAINTAINER scollier <scollier@redhat.com>
 
-RUN yum -y update; yum clean all
+RUN yum repolist all
 RUN yum -y install hostname net-tools psmisc mariadb-server mariadb; yum clean all
 
 ADD ./config_mariadb.sh /config_mariadb.sh
